@@ -84,7 +84,6 @@ body {
 .item {
   width: 300px;
   height: fit-content;
-  border: 1px solid black;
   padding: 50px;
   background-color: white;
 }
@@ -93,6 +92,8 @@ body {
   font-size: 1rem;
   font-weight: bold;
   margin: 20px 20px 0px 0px;
+  white-space: nowrap;
+
 }
 
 .item p {
@@ -104,7 +105,6 @@ body {
   width: 300px;
   height: fit-content;
   padding: 50px;
-  border: 1px solid black;
   background-color: rgb(116, 166, 235);
 }
 
@@ -113,6 +113,7 @@ body {
   font-weight: bold;
   font-size: 1rem;
   margin: 20px 20px 0px 0px;
+  white-space: nowrap;
 }
 
 .item-1 p {
@@ -120,39 +121,33 @@ body {
   font-weight: bold;
 }
 
+@media(max-width:476px) {
+
+  .item h3 {
+    padding-right: 30.28px;
+  }
+}
+
 .icon-style {
   font-size: 1.4rem;
 }
+
 /**** instead of this ****/
+
 .smiley-face-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3.375rem;
-  height: 3.875rem;
-  border-radius: 15%;
+
   color: #ea1c2c;
   background-color: #fcdcd1;
 }
 
 .double-check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3.375rem;
-  height: 3.875rem;
-  border-radius: 15%;
+
   color: #59cd82;
   background-color: #aee7a4;
 }
 
 .card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3.375rem;
-  height: 3.8375rem;
-  border-radius: 15%;
+
   color: #23a6f0;
 }
 
@@ -179,13 +174,15 @@ body {
 .card {
   color: #23a6f0;
 }
+
 /****       ****/
 
 .line {
   width: 50px;
-  height: 0px; /* when the value is 0 you don't need to specify the unit. 0 is 0 in either px or rem */
+  /* when the value is 0 you don't need to specify the unit. 0 is 0 in either px or rem */
   border: 2px solid #f7c3c3;
-  margin: 20px 20px 20px 0px; /* same here */
+  margin: 20px 20px 20px 0px;
+  /* same here */
 }
 
 /* TODO: make sure the cards are the same size :) */
